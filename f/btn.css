@@ -1,0 +1,157 @@
+body, html { 
+ background-image: url("background.jpg");
+ height: 100%;
+ margin: 0;
+ font: 1.1em/1.8em "Lato", sans-serif;
+ color: #777;
+}
+
+h3 {
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font: 1.2em "Lato", sans-serif;
+  color: #111;
+  text-align:center;
+}
+
+h4 {
+  letter-spacing: 0.05em;
+  font: 1.1em "Lato", sans-serif;
+  color: #111;
+}
+
+h6 {
+  font: 0.6em "Lato", sans-serif;
+}
+
+.iframeMenu {
+   border: 0;
+   width: 100%;
+   height: 3em;   
+   overflow: hidden;
+}
+
+.iframeMenu iframe {
+    border: 0;
+    width: 100%;
+    height: 5em;
+    margin-right: -2em;
+}
+
+/* paralax --> */
+.bgimg-0, .bgimg-1, .bgimg-2 {
+  position: relative;
+  opacity: 0.75;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 45%;
+}
+
+.bgimg-0 { 
+  opacity: 0.85;
+  background-image: url("r0.0.jpg");
+  min-height: 70%; 
+}
+
+.bgimg-1 { background-image: url("r0.1.jpg"); }
+.bgimg-2 { background-image: url("r0.2.jpg"); }
+
+.intro, .text {
+  position:relative;
+  opacity: 0.85;
+  color: #777;
+  background-color:white;
+  padding:2em 4em;
+  text-align: justify;
+}
+.text {
+  color: #ddd;
+  background-color:#282E34;
+}
+
+.caption {
+  position: absolute;
+  opacity: 0.85;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 0.6em;
+  font-size: 1.3em;
+  letter-spacing: 0.3em;
+}
+
+/* Медиа запрос что бы не включать parallax scrolling на старых устройствах */
+@media only screen and (max-device-width: 320px) {
+    .bgimg-0, .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+/*  <-- paralax */
+
+/* кнопка вверх --> */
+#btnGoToTop {
+  display: none;  /* не отоброжаем по умолчанию */
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.6em;
+  z-index: 99;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: red;
+  cursor: pointer;
+  padding: 0.1em 0.3em; /* Поля вокруг надписи */
+  border-radius: 1.0em; /* радиус закругления */
+  border: 0.15em solid #f44336;
+}
+
+#btnGoToTop:hover {
+  background-color:#f44336;
+  color: white;
+}
+/*  <-- кнопка вверх */
+
+/* кнопки --> */
+.btn {
+  border: 0.15em solid black;
+  border-radius: 0.21em;
+  background-color: white;
+  color: black;
+  font-size: 1.1em;
+  padding:  0.1em 0.5em;
+  cursor: pointer;
+  max-width: 12em;
+  min-width: 9em;
+  height: 3em;
+  overflow: hidden;
+}
+
+.btnGreen { border-color: #4CAF50;  color: green; }
+.btnGreen:hover { background-color: #4CAF50; color: white; }
+
+.btnBlue { border-color: #2196F3; color: dodgerblue; }
+.btnBlue:hover { background: #2196F3; color: white; }
+
+.btnOrange { border-color: #ff9800; color: orange; }
+.btnOrange:hover { background: #ff9800; color: white; }
+
+.btnRed { border-color: #f44336; color: red;}
+.btnRed:hover { background: #f44336; color: white;}
+
+.btnPurple { border-color: #800080; color: purple; }
+.btnPurple:hover { background: #800080; color: white;}
+
+.btnGrey { border-color: #777777; color: black; }
+.btnGrey:hover { background: #777777;color: white;}
+
+/* <-- кнопки */
